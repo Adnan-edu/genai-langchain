@@ -21,7 +21,7 @@ groq_api_key=os.getenv("GROQ_API_KEY")
 ## If you do not have open AI key use the below Huggingface embedding
 os.environ['HF_TOKEN']=os.getenv("HF_TOKEN")
 from langchain_huggingface import HuggingFaceEmbeddings
-embeddings=HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+embeddings=HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2") # sentence-transformers/all-mpnet-base-v2
 
 llm=ChatGroq(groq_api_key=groq_api_key,model_name="Llama3-8b-8192")
 
